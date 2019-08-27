@@ -14,12 +14,12 @@ class Test(unittest.TestCase):
         # compara o status da requisicao (precisa ser igual a 200)
         self.assertEqual(result.status_code, 200) 
 
-    def test_conteudo(self):
-        # envia uma requisicao GET para a URL
-        result = self.app.get('/') 
-
-        # verifica o retorno do conteudo da pagina
-        self.assertRegex(result.data.decode(), "API Distances Google")
+#    def test_conteudo(self):
+#        # envia uma requisicao GET para a URL
+#        result = self.app.get('/') 
+#
+#        # verifica o retorno do conteudo da pagina
+#        self.assertRegex(result.data.decode(), "API Distances Google")
 
 
 if __name__ == "__main__":
