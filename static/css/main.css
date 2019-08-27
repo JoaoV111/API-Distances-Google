@@ -1,3 +1,12 @@
 body {
   font-family: sans-serif;
+  background-color: #e6e6e6;
+
+}
+
+.white-box{
+	float: center;
+	padding: 50px;
+	margin: 50px;
+	background-color: white;
 }
