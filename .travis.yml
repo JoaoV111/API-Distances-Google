@@ -10,7 +10,8 @@ sudo: required
 
 # Instalação de Módulos que são necessários para a Aplicação.
 install:
-  - pip install -r requirements.txt
+  - pip3 install -r requirements.txt
+
 
 # Defini o script de Teste que deve rodar toda vez que o código for alterado.
 script:
