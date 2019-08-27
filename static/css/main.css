@@ -1,12 +1,21 @@
+head {
+	height: 200px;
+}
+
 body {
   font-family: sans-serif;
   background-color: #e6e6e6;
 
 }
 
-.white-box{
+.whitebox{
 	float: center;
 	padding: 50px;
-	margin: 50px;
+	margin: 200px;
 	background-color: white;
+	width: 60%;
+}
+
+li {
+	text-decoration: none;
 }

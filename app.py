@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from urllib2 import Request, urlopen
 
 app = Flask(__name__)
 
@@ -11,6 +12,9 @@ if __name__ == '__main__':
 	
 @app.route("/music-lyrics/")
 def MusicLyrics():
-	return ("OK")
+	request = Request('https://api.lyrics.ovh/v1/slipknot/before i forget')
+	response_body = urlopen(request).read()
+	return render_template('musiclyrics.html')
+
 
 
