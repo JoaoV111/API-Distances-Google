@@ -5,14 +5,29 @@
 {% endblock %}
 
 {% block body %}
-<div class="whitebox">
-  <h1 style="text-align: center;">
+<div class="whitebox center">
+  <h1 style="margin: 50px;font-size: 300%;">
     APIs List
   </h1>
-  <ul>
-	<li><a href="/music-lyrics">Music Lyrics</a></li>
-	<li><a href="/exemple2">API 2</a></li>
-	<li><a href="/exemple3">API 3</a></li>
-	</ul>
-</div>
- {% endblock %}
+  <form action="/music-lyrics">
+    <input type="submit" value="Music Lyrics" class="button button1"/><br>
+  </form>
+  <form action="/music-lyrics">
+  	<input type="submit" value="API2" class="button button1"/><br>
+  </form>
+  <form action="/music-lyrics">
+	<input type="submit" value="API3" class="button button1"/><br>
+  </form>
+  <form action="/music-lyrics">
+	<input type="submit" value="API4" class="button button1"/><br>
+  </form>
+  <form action="/music-lyrics">
+	<input type="submit" value="API5" class="button button1"/><br>
+  </form>
+  <form action="/music-lyrics">
+	<input type="submit" value="API6" class="button button1"/><br>
+  </form>
+  <form action="/music-lyrics">
+	<input type="submit" value="API7" class="button button1"/><br>
+  </form>
+{% endblock %}
