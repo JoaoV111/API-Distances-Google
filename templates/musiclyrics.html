@@ -6,12 +6,30 @@
 
 {% block body %}
 <div class="whitebox center">
+
   <h1>
     Music Lyrics
   </h1>
+
+  <div style="max-width: 50%;" class="center">
+    <form action="/music-lyrics/" method="POST">
+      <p style="text-align: left">Artist:</p>
+      <input type="text" name="artist" id="artist" size="45"><br>
+      <p style="text-align: left">Title:</p>
+      <input type="text" name="title" id="title" size="45"><br><br>
+      <input type="submit" value="Search Music" class="button1"><br><br>
+    </form>
+  </div>
+
   <p style="text-align: left;">
-  {{ lyrics }}
+    Artist: {{ Artist }}<br>
+    Title: {{ Title }}<br>
+    Lyrics:<br><br>
+    {% autoescape false %}
+      {{ lyrics }}
+    {% endautoescape %}
   </p>
+
   
 </div>
  {% endblock %}
