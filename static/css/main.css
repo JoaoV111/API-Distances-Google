@@ -118,9 +118,9 @@ p.p2{
 }
 
 .button5 {
-  background-color: #ffff66; 
+  background-color: #ffd699; 
   color: white; 
-  border: 2px solid #ffff66;
+  border: 2px solid #ffd699;
 }
 
 .button6 {
@@ -156,7 +156,7 @@ p.p2{
 
 .button5:hover {
   background-color: white;
-  color: #ffff4d;
+  color: #ffd699;
 }
 
 .button6:hover {
