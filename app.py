@@ -14,8 +14,8 @@ def MusicLyrics():
 	Artist = 'artist'
 	Title = 'title'
 	if request.method == 'POST':
-		Artist = request.form['artist']
-		Title = request.form['title']
+		Artist = request.form['artist'].strip()
+		Title = request.form['title'].strip()
 		if Artist == '' or Title == '':
 			Artist = 'artist'
 			Title = 'title'
