@@ -30,6 +30,8 @@ def MusicLyrics():
 	
 	return render_template('musiclyrics.html', lyrics=lyrics, Artist=Artist, Title=Title)
 
+	
+
 if __name__ == '__main__':
     app.run(debug=True)
 
