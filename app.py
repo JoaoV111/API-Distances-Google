@@ -40,8 +40,8 @@ def CryptoCurrency():
 	req_json = [{},{}]
 
 	if request.method == 'POST':
-		f_name = request.form['f_name'].capitalize()
-		s_name = request.form['s_name'].capitalize()
+		f_name = request.form['f_name'].capitalize().strip()
+		s_name = request.form['s_name'].capitalize().strip()
 		
 		try:
 			url = 'https://joao-api-cryptocurrency.herokuapp.com/currency/all'
