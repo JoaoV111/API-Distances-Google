@@ -11,11 +11,20 @@
   <p class="p3">
     Choose two cryptocurrencies to convert each other.
   </p>
-  <div class="i_text center" style="max-width: 50%;">
+  <div class="center" style="max-width: 50%;">
     <form autocomplete="off" action="/crypto-currency/" method="POST">
-      <input id="f_name_input" type="text" name="f_name" placeholder="Ex: Bitcoin">
-      <input id="s_name_input" type="text" name="s_name" placeholder="Ex: Iota">
-      <input type="submit" value="Convert" class="button1"><br><br>
+	  <div class="autocomplete" style="width: 48%;float: left">
+	    <p style="text-align: left;margin-left: 0px;margin-bottom: 0px">First Currency:</p>
+        <input id="f_name_input" class="i_text" type="text" name="f_name" placeholder="Ex: Bitcoin"
+		style="width: 100%">
+	  </div>
+	  <div class="autocomplete"  style="width: 48%;float: right">
+	    <p style="text-align: left;margin-left: 0px;margin-bottom: 0px">Second Currency:</p>
+        <input id="s_name_input" class="i_text" type="text" name="s_name" placeholder="Ex: Iota"
+		style="width: 100%">
+	  </div>
+	  <br><br><br><br>
+        <input type="submit" value="Convert" class="button1"><br><br>
     </form>
   </div>
   <p>{{ req_json[0]['id'] }}</p>
