@@ -34,27 +34,35 @@ def MusicLyrics():
 def CryptoCurrency():
 	f_id = ''
 	s_id = ''
+	f_name = ''
+	s_name = ''
+	result = ''
+	req_json = [{},{}]
 
 	if request.method == 'POST':
-		f_id = resquest.form['f_id']
-		s_id = resquest.form['s_id']
-		
-		try:
-			url = f'https://joao-api-cryptocurrency.herokuapp.com/currency?f_id={f_id}&s_id={s_id}'
-			req = requests.get(url)
-			req_json = json.loads(req.text)
-			result = ''
-			div1 = req_json["div1"]
-		except:
-			result = 'No currencies found.'
+		f_name = request.form['f_name'].capitalize()
+		s_name = request.form['s_name'].capitalize()
 		
 		try:
 			url = 'https://joao-api-cryptocurrency.herokuapp.com/currency/all'
 			req_all = requests.get(url)
+			req_json_all = json.loads(req_all.text)
+			for currency in req_json_all:
+				if currency['name'].lower() == f_name.lower():
+					f_id = currency['id']
+				if currency['name'].lower() == s_name.lower():
+					s_id = currency['id']
+			url = f'https://joao-api-cryptocurrency.herokuapp.com/currency?f_id={f_id}&s_id={s_id}'
+			req = requests.get(url)
+			req_json = json.loads(req.text)
+			if req_json == [{}]:
+				req_json = [{},{}]
+				result = 'Currencies not found.'
 		except:
-			result = 'Server error'
-
-	return render_template('currency.html', result=result, div1=div1, req_all=req_all)
+			result = 'Server Error.'
+		
+	return render_template('currency.html', result=result, f_name=f_name, s_name=s_name,
+	                       req_json=req_json)
 
 if __name__ == '__main__':
     app.run(debug=True)

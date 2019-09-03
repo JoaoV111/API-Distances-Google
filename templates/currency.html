@@ -6,4 +6,21 @@
 
 {% block body %}
 
+<form autocomplete="off" action="/crypto-currency/" method="POST">
+    <div class="autocomplete" style="width:300px;">
+      <input id="f_name_input" type="text" name="f_name" placeholder="Ex: Bitcoin">
+    </div>
+    <div class="autocomplete" style="width:300px;">
+      <input id="s_name_input" type="text" name="s_name" placeholder="Ex: Iota">
+    </div>
+    <input type="submit">
+    <p>{{ req_json[0]['id'] }}</p>
+    <p>{{ req_json[0]['price'] }}</p>
+    <p>{{ req_json[1]['id'] }}</p>
+    <p>{{ req_json[1]['price'] }}</p>
+    <p>{{ result }}</p>
+</form>
+
+
+<script src="/static/js/main.js"></script>
 {% endblock %}

@@ -16,7 +16,7 @@ h1.h1_1{
   display: block;
 }
 
-p.p1{
+pre.pre1{
   float: right;
   width: 450px;
   margin-right: 13%;
@@ -24,10 +24,11 @@ p.p1{
   margin-top: 25px;
   display: block;
   margin-bottom: 70px;
+  font-family: 'PoppinsBlack', sans-serif;
 }
 
 p.p2{
-  margin-top: 20px;
+  margin-top: 0px;
   text-align: center;
   display: block;
   font-size: 150%;
