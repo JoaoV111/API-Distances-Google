@@ -96,7 +96,7 @@ function autocomplete(inp, arr) {
   }
   
   /*An array containing all the country names in the world:*/
-  var countries = ['01coin', 'O2 Token', '0chain', '0x', '0xcert', '0xDark', 
+  var currencies = ['01coin', 'O2 Token', '0chain', '0x', '0xcert', '0xDark', 
   '10M Token', '12Ships', 'Elite', '1irstcoin', '1Million Token', '1SG', '1World', 
   '1X2 Coin', '2345 Star Coin', '2ACoin', '2GIVE', '300cubits', '300 Token', 
   '360 Tribe', '3D-Chain', '404', '42-coin', '4A Coin', '4Hiphop', '4New', '4xBit', 
@@ -170,5 +170,5 @@ function autocomplete(inp, arr) {
   'Zulu Republic Token', 'Zumy', 'zuzubecoin', 'zXFLEA'];
   
   /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-  autocomplete(document.getElementById("f_name_input"), countries);
-  autocomplete(document.getElementById("s_name_input"), countries);
+  autocomplete(document.getElementById("f_name_input"), currencies);
+  autocomplete(document.getElementById("s_name_input"), currencies);
