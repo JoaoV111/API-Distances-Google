@@ -27,10 +27,24 @@
 		  <input type="submit" value="Convert" class="button1"><br><br>
 	  </form>
   </div>
-  <p>{{ req_json[0]['id'] }}</p>
-  <p>{{ req_json[0]['price'] }}</p>
-  <p>{{ req_json[1]['id'] }}</p>
-  <p>{{ req_json[1]['price'] }}</p>
   <p>{{ result }}</p>
+  <div>
+	<table class="table1">
+		<tr>
+			<td style="font-weight: 900">{{ req_json[0]['id'] }}: </td>
+			<td style="border: 0px;"></td>
+			<td style="font-weight: 900">{{ req_json[1]['id'] }}: </td>
+			<td style="border: 0px;"></td>
+		</tr>
+		<tr>
+			<td>Price: </td>
+			<td>U$ {{ req_json[0]['price'] }}</td>
+			<td>Price: </td>
+			<td>U$ {{ req_json[1]['price'] }}</td>
+		</tr>
+	</table><br><br>
+	<pre class="pre2">So, 1 {{ req_json[0]['id'] }} are equivalent of {{ req_json[1]['id'] }}s</pre>
+  </div>
+  
   <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
 {% endblock %}
