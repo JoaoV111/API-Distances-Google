@@ -5,22 +5,24 @@
 {% endblock %}
 
 {% block body %}
-
-<form autocomplete="off" action="/crypto-currency/" method="POST">
-    <div class="autocomplete" style="width:300px;">
+  <h1>
+    Cryptocurrency Convensor
+  </h1>
+  <p class="p3">
+    Choose two cryptocurrencies to convert each other.
+  </p>
+  <div class="i_text center" style="max-width: 50%;">
+    <form autocomplete="off" action="/crypto-currency/" method="POST">
       <input id="f_name_input" type="text" name="f_name" placeholder="Ex: Bitcoin">
-    </div>
-    <div class="autocomplete" style="width:300px;">
       <input id="s_name_input" type="text" name="s_name" placeholder="Ex: Iota">
-    </div>
-    <input type="submit">
-    <p>{{ req_json[0]['id'] }}</p>
-    <p>{{ req_json[0]['price'] }}</p>
-    <p>{{ req_json[1]['id'] }}</p>
-    <p>{{ req_json[1]['price'] }}</p>
-    <p>{{ result }}</p>
-</form>
-
-
-<script src="/static/js/main.js"></script>
+      <input type="submit" value="Convert" class="button1"><br><br>
+    </form>
+  </div>
+  <p>{{ req_json[0]['id'] }}</p>
+  <p>{{ req_json[0]['price'] }}</p>
+  <p>{{ req_json[1]['id'] }}</p>
+  <p>{{ req_json[1]['price'] }}</p>
+  <p>{{ result }}</p>
+  
+  <script src="/static/js/main.js"></script>
 {% endblock %}
