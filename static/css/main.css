@@ -28,6 +28,11 @@ pre.pre1{
   font-family: 'PoppinsBlack', sans-serif;
 }
 
+pre.pre2{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+}
+
 p.p2{
   margin-top: 0px;
   text-align: center;
@@ -42,6 +47,23 @@ p.p3{
   margin-top: 0px;
   font-weight: 900;
   font-family: 'Poppins', sans-serif;
+}
+
+table.table1{
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 80%;
+	min-width:50%;
+	border-collapse: collapse;
+    font-family: 'Poppins', sans-serif;
+}
+
+table.table1 td, tr {
+  border-collapse: collapse;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 5px;
 }
 
 /*------------------------------------------------------------------------*/
@@ -206,17 +228,20 @@ input.i_text{
 /*------------------------------------------------------------------------*/
 /*Autocomplete script*/
 .autocomplete-items {
+  position: absolute;
   border: 1px solid #d4d4d4;
   border-bottom: none;
   border-top: none;
   z-index: 99;
-  top: 100%;
-  left: 0;
-  right: 0;
+  width: 262px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  overflow: auto;
+  max-height: 300px;
 }
 
 .autocomplete-items div {
-  padding: 5px;
+  padding: 2px;
   cursor: pointer;
   background-color: #fff; 
   border-bottom: 1px solid #d4d4d4; 
