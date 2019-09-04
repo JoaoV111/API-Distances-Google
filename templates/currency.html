@@ -50,6 +50,11 @@
 			<td style="text-align: center">U$ {{ req_json[1]['price'] }}</td>
 		</tr>
 	</table><br><br>
+
+	<script src="https://widgets.coingecko.com/coingecko-coin-compare-chart-widget.js"></script>
+		<coingecko-coin-compare-chart-widget  coin-ids="{{ req_json[0]['id'] }},{{ req_json[1]['id'] }}"
+		currency="usd" locale="en"></coingecko-coin-compare-chart-widget>
+
   </div>
 
   {% if req_json != [{}, {}] %}
