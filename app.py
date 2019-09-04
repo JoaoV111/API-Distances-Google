@@ -36,7 +36,7 @@ def CryptoCurrency():
 	s_id = ''
 	f_name = ''
 	s_name = ''
-	f_value = 0.0
+	f_value = 1.0
 	result = ''
 	req_json = [{},{}]
 
