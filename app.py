@@ -65,8 +65,7 @@ def CryptoCurrency():
 		except:
 			result = 'Server Error.'
 		
-	return render_template('currency.html', result=result, f_name=f_name, s_name=s_name,
-	                       req_json=req_json, f_value=f_value)
+	return render_template('currency.html', result=result, req_json=req_json)
 
 if __name__ == '__main__':
     app.run(debug=True)
