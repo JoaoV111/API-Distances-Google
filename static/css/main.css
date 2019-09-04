@@ -56,12 +56,13 @@ table.table1{
 	max-width: 80%;
 	min-width:50%;
 	border-collapse: collapse;
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f1f1f1;
 }
 
 table.table1 td, tr {
   border-collapse: collapse;
-  border: 1px solid #dddddd;
+  border: 1px solid #b1afaf;
   text-align: left;
   padding: 5px;
 }
@@ -209,7 +210,7 @@ table.table1 td, tr {
 
 /*------------------------------------------------------------------------*/
 /*Input text box*/
-input.i_text{
+.i_text{
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -225,6 +226,25 @@ input.i_text{
   background-color: #f1f1f1;
 }
 
+.i_number{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid #C2C2C2;
+  box-shadow: 1px 1px 4px #EBEBEB;
+  -moz-box-shadow: 1px 1px 4px #EBEBEB;
+  -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  padding: 3px;
+  outline: none;
+  background-color: #f1f1f1;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 2px;
+  font: 400 13.3333px Arial;
+}
 /*------------------------------------------------------------------------*/
 /*Autocomplete script*/
 .autocomplete-items {
@@ -233,7 +253,7 @@ input.i_text{
   border-bottom: none;
   border-top: none;
   z-index: 99;
-  width: 262px;
+  width: 218px;
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
   overflow: auto;
@@ -243,8 +263,8 @@ input.i_text{
 .autocomplete-items div {
   padding: 2px;
   cursor: pointer;
-  background-color: #fff; 
   border-bottom: 1px solid #d4d4d4; 
+  background-color: #f7f7f7;
 }
 
 .autocomplete-items div:hover {
