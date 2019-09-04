@@ -36,12 +36,15 @@ def CryptoCurrency():
 	s_id = ''
 	f_name = ''
 	s_name = ''
+	f_value = 0.0
 	result = ''
 	req_json = [{},{}]
 
 	if request.method == 'POST':
 		f_name = request.form['f_name'].strip().capitalize()
 		s_name = request.form['s_name'].strip().capitalize()
+		f_value = str(request.form['f_value']).replace(',', '.')
+		
 		
 		try:
 			url = 'https://joao-api-cryptocurrency.herokuapp.com/currency/all'
@@ -52,7 +55,8 @@ def CryptoCurrency():
 					f_id = currency['id']
 				if currency['name'].lower() == s_name.lower():
 					s_id = currency['id']
-			url = f'https://joao-api-cryptocurrency.herokuapp.com/currency?f_id={f_id}&s_id={s_id}'
+			url = (f'https://joao-api-cryptocurrency.herokuapp.com/currency'
+				   f'?f_id={f_id}&s_id={s_id}&f_value={f_value}')
 			req = requests.get(url)
 			req_json = json.loads(req.text)
 			if req_json == [{}]:
@@ -62,7 +66,7 @@ def CryptoCurrency():
 			result = 'Server Error.'
 		
 	return render_template('currency.html', result=result, f_name=f_name, s_name=s_name,
-	                       req_json=req_json)
+	                       req_json=req_json, f_value=f_value)
 
 if __name__ == '__main__':
     app.run(debug=True)
