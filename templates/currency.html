@@ -16,9 +16,9 @@
 		  <div class="autocomplete" style="width: 40%;float: left;">
 			  <p style="text-align: left;margin-left: 0px;margin-bottom: 0px">First Currency:</p>
 			  <input id="f_name_input" class="i_text" type="text" name="f_name" placeholder="Ex: Bitcoin"
-				 style="width: 100%" value="{{ req_json[0]['name'] }}">
+				     style="width: 100%" value="{{ req_json[0]['name'] }}" required>
 			  <input type="number" value="{{ f_value }}" step="0.00000000001" min="0" 
-	                         max="10" name="f_value" style="width: 100%" class="i_number">
+	                 max="10" name="f_value" style="width: 100%" class="i_number">
 		  </div>
 		  <div style="width: 4%;display:inline-block;margin-top: 28px"><p>To 
 		       <img src="/static/images/arrow.png" style="height: 25px;"></p>
@@ -26,7 +26,7 @@
 		  <div class="autocomplete"  style="width: 40%;float: right">
 			  <p style="text-align: left;margin-left: 0px;margin-bottom: 0px">Second Currency:</p>
 			  <input id="s_name_input" class="i_text" type="text" name="s_name" placeholder="Ex: Iota"
-				 style="width: 100%" value="{{ req_json[1]['name'] }}">
+				     style="width: 100%" value="{{ req_json[1]['name'] }}" required>
 			  <p type="number" step="0.00000000001" min="0" max="10"
 				 style="width: 100%;height: 23px;" class="i_number">{{ req_json[1]['value'] }}</p>
 		  </div>
@@ -63,5 +63,6 @@
 	  h_div.style.display = "block";
 	</script>
   {% endif %}
+  
   <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
 {% endblock %}
