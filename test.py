@@ -4,6 +4,7 @@ import requests
 from unittest import mock
 
 def mocked_requests_get(*args, **kwargs):
+    # mock request setup
     class MockResponse:
         def __init__(self, json_data, status_code):
             self.status_code = status_code
@@ -57,7 +58,7 @@ class Tests(unittest.TestCase):
         self.assertEqual(result.status_code, 200)
 
     @mock.patch('app.requests.get', side_effect=mocked_requests_get)
-    def test_API_Cryptocurrency(self, mock_get):
+    def test_API_Cryptocurrency(self):
         # test API cryptocurrency response
         result = self.app.post('/crypto-currency/', 
                                data={ "f_name": "bitcoin", "s_name": "iota", "f_value": 1.0 }, 
