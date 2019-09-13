@@ -58,7 +58,7 @@ class Tests(unittest.TestCase):
         self.assertEqual(result.status_code, 200)
 
     @mock.patch('app.requests.get', side_effect=mocked_requests_get)
-    def test_API_Cryptocurrency(self):
+    def test_API_Cryptocurrency(self, mock_get):
         # test API cryptocurrency response
         result = self.app.post('/crypto-currency/', 
                                data={ "f_name": "bitcoin", "s_name": "iota", "f_value": 1.0 }, 
