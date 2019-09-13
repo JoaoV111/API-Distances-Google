@@ -38,7 +38,7 @@ def CryptoCurrency():
 		s_name = request.form['s_name'].strip().capitalize()
 		f_value = str(request.form['f_value']).replace(',', '.')
 		
-		
+		import ipdb;ipdb.set_trace()
 		try:
 			url = 'https://joao-api-cryptocurrency.herokuapp.com/currency/all'
 			req_all = requests.get(url)
