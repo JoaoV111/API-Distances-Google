@@ -41,12 +41,14 @@ def mocked_requests_get(*args, **kwargs):
 
     return MockResponse(None, 404)
 
-class TestAPI(unittest.TestCase):
+class Tests(unittest.TestCase):
         
     def setUp(self):
+        # create instance of unittest
         self.app = app.test_client()
 
     def test_request(self):
+        # test all urls requests 
         result = self.app.get('/')
         self.assertEqual(result.status_code, 200) 
         result = self.app.get('/music-lyrics/')
@@ -55,8 +57,8 @@ class TestAPI(unittest.TestCase):
         self.assertEqual(result.status_code, 200)
 
     @mock.patch('app.requests.get', side_effect=mocked_requests_get)
-    def test_fetch(self, mock_get):
-
+    def test_API_Cryptocurrency(self, mock_get):
+        # test API cryptocurrency response
         result = self.app.post('/crypto-currency/', 
                                data={ "f_name": "bitcoin", "s_name": "iota", "f_value": 1.0 }, 
                                content_type= 'application/x-www-form-urlencoded')
